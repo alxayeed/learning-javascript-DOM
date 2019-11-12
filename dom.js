@@ -48,17 +48,38 @@ var items = document.getElementsByClassName('list-group-item');
 // }
 
 //getElementsByTagName()
-var items = document.getElementsByTagName('li');
-console.log(items);
-console.log(items[3]);
-items[1].textContent = 'Hello';
-items[2].innerText = 'Hola';
-items[3].style.fontSize='25px';
-items[0].style.fontWeight='bold';
-items[1].style.backgroundColor = 'orange';
+// var items = document.getElementsByTagName('li');
+// console.log(items);
+// console.log(items[3]);
+// items[1].textContent = 'Hello';
+// items[2].innerText = 'Hola';
+// items[3].style.fontSize='25px';
+// items[0].style.fontWeight='bold';
+// items[1].style.backgroundColor = 'orange';
 
-// items.style.backgroundColor = '#f4f4f4'; //Gives error,because items is an HTML list item
+// // items.style.backgroundColor = '#f4f4f4'; //Gives error,because items is an HTML list item
 
-for(var i=0;i<items.length;i++){
-	items[i].style.backgroundColor = '#f4f4f4';
-}
+// for(var i=0;i<items.length;i++){
+// 	items[i].style.backgroundColor = '#f4f4f4';
+// }
+
+//QUERYSELECTOR - grabs only the first element
+// var header = document.querySelector('#header-title');
+// header.style.backgroundColor = '#ccc';
+
+// var input = document.querySelector('input');
+// input.value = 'Hola Amigo';
+
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = 'SEND';
+
+// var item = document.querySelector('.list-group-item');
+// item.style.color = 'red';
+
+// var lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
+
+// var nthItem = document.querySelector('.list-group-item:nth-child(2)');
+// nthItem.style.color = 'yellow';
+
+//QUERYSELECTORALL
