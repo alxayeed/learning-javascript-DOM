@@ -18,12 +18,13 @@
 
 //getElementById()
 // console.log(document.getElementById('header-title'));
-var headertitle = document.getElementById('header-title');
-var header = document.getElementById('main-header');
+// var headertitle = document.getElementById('header-title');
+// var header = document.getElementById('main-header');
 // console.log(headertitle);
 // headertitle.textContent='Hello';
 // headertitle.innerText = 'Hola';
-//They are almost same,but innertext follows what is in the style
+//They are almost same,but innertext follows what is in the style//
+
 // console.log(headertitle.textContent);
 // console.log(headertitle.innerText);
 // headertitle.innerHTML = '<h1>Hey</h1>';
@@ -31,8 +32,8 @@ var header = document.getElementById('main-header');
 
 // header.style.borderBottom = 'solid 10px #000';
 
-//getElementsByClasseName()
-var items = document.getElementsByClassName('list-group-item');
+//getElementsByClasseName()//
+// var items = document.getElementsByClassName('list-group-item');
 // console.log(items);
 // console.log(items[3]);
 // items[1].textContent = 'Hello';
@@ -47,7 +48,7 @@ var items = document.getElementsByClassName('list-group-item');
 // 	items[i].style.backgroundColor = '#f4f4f4';
 // }
 
-//getElementsByTagName()
+//getElementsByTagName()//
 // var items = document.getElementsByTagName('li');
 // console.log(items);
 // console.log(items[3]);
@@ -63,7 +64,7 @@ var items = document.getElementsByClassName('list-group-item');
 // 	items[i].style.backgroundColor = '#f4f4f4';
 // }
 
-//QUERYSELECTOR - grabs only the first element
+//QUERYSELECTOR - grabs only the first element//
 // var header = document.querySelector('#header-title');
 // header.style.backgroundColor = '#ccc';
 
@@ -83,16 +84,73 @@ var items = document.getElementsByClassName('list-group-item');
 // nthItem.style.color = 'yellow';
 
 //QUERYSELECTORALL 
-var titles = document.querySelectorAll('.title');
-console.log(titles); //Nodelist
+// var titles = document.querySelectorAll('.title');
+// console.log(titles); //Nodelist
 
-var odd = document.querySelectorAll('li:nth-child(odd)');
-var even = document.querySelectorAll('li:nth-child(even)');
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// var even = document.querySelectorAll('li:nth-child(even)');
 
-for (var i=0;i<odd.length;i++){
-	odd[i].style.backgroundColor = 'orange';
-	even[i].style.backgroundColor = 'skyblue';
-}
+// for (var i=0;i<odd.length;i++){
+// 	odd[i].style.backgroundColor = 'orange';
+// 	even[i].style.backgroundColor = 'skyblue';
+// }
 
+
+//TRAVERSING THE DOM //
+var itemList = document.querySelector('#items');
+
+//parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='orange';
+// console.log(itemList.parentNode.parentNode);
+// console.log(itemList.parentNode.parentNode.parentNode.parentNode.parentNode);
+
+//parentElement//
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='yellow';
+// console.log(itemList.parentElement.parentElement);
+// console.log(itemList.parentElement.parentElement.parentElement.parentElement.parentElement);
+
+
+//childNodes//
+// console.log(itemList.childNodes);//returns nodeList-includes linebreaks as item
+
+//children//
+// console.log(itemList.children);//returns HTMLCollection - excluding linebreaks;
+
+// itemList.children[1];
+// itemList.children[1].style.backgroundColor='red';
+
+//firstChild//
+ // console.log(itemList.firstChild);//includes linebreaks
+
+//firstElementChild//
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'firstElementChild';
+
+
+//lastChild//
+ // console.log(itemList.firstChild);//includes linebreaks
+
+//lastElementChild//
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'lastElementChild';
+ 
+//SIBLINGS//
+//nextSibling//
+
+// console.log(itemList.nextSibling);
+
+// //nextElementSibling//
+// console.log(itemList.nextElementSibling);
+
+//previousSibling//
+// console.log(itemList.previousSibling);
+
+// //previousElementSibling//
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color='orange';
+
+ 
 
 
