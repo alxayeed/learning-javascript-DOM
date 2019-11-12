@@ -82,4 +82,17 @@ var items = document.getElementsByClassName('list-group-item');
 // var nthItem = document.querySelector('.list-group-item:nth-child(2)');
 // nthItem.style.color = 'yellow';
 
-//QUERYSELECTORALL
+//QUERYSELECTORALL 
+var titles = document.querySelectorAll('.title');
+console.log(titles); //Nodelist
+
+var odd = document.querySelectorAll('li:nth-child(odd)');
+var even = document.querySelectorAll('li:nth-child(even)');
+
+for (var i=0;i<odd.length;i++){
+	odd[i].style.backgroundColor = 'orange';
+	even[i].style.backgroundColor = 'skyblue';
+}
+
+
+
