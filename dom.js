@@ -152,5 +152,30 @@ var itemList = document.querySelector('#items');
 // itemList.previousElementSibling.style.color='orange';
 
  
+//CREATING ELEMENTS
+//createElements
+
+//creating a <div> element
+var newDiv = document.createElement('div');
+
+//add class
+newDiv.className = 'new class';
+
+//add id
+newDiv.id='new id';
+
+//add attribute
+newDiv.setAttribute('title','new title');
+
+//create text node
+var newDivText  = document.createTextNode('This element is created and added to the DOM by Vanilla js instead of HTML/CSS');
+newDiv.appendChild(newDivText);
+
+//adding to the DOM
+var container = document.querySelector('header  .container');
+var ul = document.querySelector('header h1');
+newDiv.style.fontSize='13px';
+container.insertBefore(newDiv,ul);
+
 
 
