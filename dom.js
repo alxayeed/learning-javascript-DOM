@@ -180,37 +180,69 @@ var itemList = document.querySelector('#items');
 
 			//EVENT LISTENER//
 
+// var button = document.getElementById('button')
+// button.addEventListener('click',event);
+
+// function buttonClick(){
+// 	document.getElementById('hey').textContent = '';
+// 	// document.getElementById('header-title').style.color = '#000000';
+// 	var output = document.getElementById('output');
+// 	output.innerHTML = '<h1>'+'Thank You'+'</h1>';
+
+// }
+
+// function event(e){
+// 	// console.log(e)
+// 	// console.log(e.screenY)
+// 	// console.log(e.path)
+// 	// console.log(e.srcElement)
+// 	// console.log(e.target)
+// 	// console.log(e.target.id)
+// 	// console.log(e.target.className)
+// 	// console.log(e.target.classList)
+// 	// console.log(e.clientX)//mouse position on the browser screen
+// 	// console.log(e.clientY)
+// 	// console.log(e.offsetX)//mouse position on the actual button
+// 	// console.log(e.offsetY)
+
+// 	// console.log(e.altKey); //key is pressed or not
+// 	// console.log(e.ctrlKey);
+// 	// console.log(e.shiftKey);
+
+
+// }
+
+
+   //MOUSE ACTIONS//
 var button = document.getElementById('button')
-button.addEventListener('click',event);
 
-function buttonClick(){
-	document.getElementById('hey').textContent = '';
-	// document.getElementById('header-title').style.color = '#000000';
-	var output = document.getElementById('output');
-	output.innerHTML = '<h1>'+'Thank You'+'</h1>';
 
-}
+// button.addEventListener('click',mouseEvent); //click
+// button.addEventListener('dblclick',mouseEvent); //double click
+// button.addEventListener('mouseup',mouseEvent); //when mouse clicked
+// button.addEventListener('mousedown',mouseEvent); //when click is released
 
-function event(e){
-	// console.log(e)
-	// console.log(e.screenY)
-	// console.log(e.path)
-	// console.log(e.srcElement)
-	// console.log(e.target)
-	// console.log(e.target.id)
-	// console.log(e.target.className)
-	// console.log(e.target.classList)
-	// console.log(e.clientX)//mouse position on the browser screen
-	// console.log(e.clientY)
-	// console.log(e.offsetX)//mouse position on the actual button
-	// console.log(e.offsetY)
+//uncomment the <div></div> of id="box" in the index.html
+var box = document.getElementById('box')
 
-	// console.log(e.altKey); //key is pressed or not
-	// console.log(e.ctrlKey);
-	// console.log(e.shiftKey);
+// box.addEventListener('mouseenter',mouseEvent); //when mouse enters the box
+// box.addEventListener('mouseleave',mouseEvent);//when mouse enters the box
+// box.addEventListener('mouseover',mouseEvent);//when mouse enters the box as well as any inner elements (eg - h1)
+// box.addEventListener('mouseout',mouseEvent);//when mouse exits the box as well as any inner elements (eg - h1)
 
+var output = document.getElementById('box');
+box.addEventListener('mousemove',mouseEvent);
+
+function mouseEvent(e){
+	// console.log('EVENT TYPE:'+e.type)
+
+	// output.innerHTML = '<h1>Mouse X:'+e.offsetX+'</h1><h1>Mouse Y:'+e.offsetY+'</h1>'
+	box.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",0)";
+	document.body.style.backgroundColor="rgb("+e.offsetY+","+e.offsetX+",100)";
 
 }
+
+
 
 
 
