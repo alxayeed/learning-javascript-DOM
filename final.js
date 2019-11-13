@@ -35,3 +35,17 @@ function addItem(e){
   console.log(deleteBtn)
 }
 
+//DELETE
+itemList.addEventListener('click',deleteItem);
+
+function deleteItem(e){
+  if(e.target.classList.contains('delete')){
+    if(confirm('Are you sure to delete?')){
+      var li  = e.target.parentElement
+      itemList.removeChild(li);
+    }
+    console.log(e.type);
+  }
+  
+}
+
