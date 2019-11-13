@@ -155,27 +155,63 @@ var itemList = document.querySelector('#items');
 //CREATING ELEMENTS
 //createElements
 
-//creating a <div> element
-var newDiv = document.createElement('div');
+// //creating a <div> element
+// var newDiv = document.createElement('div');
 
-//add class
-newDiv.className = 'new class';
+// //add class
+// newDiv.className = 'new class';
 
-//add id
-newDiv.id='new id';
+// //add id
+// newDiv.id='new id';
 
-//add attribute
-newDiv.setAttribute('title','new title');
+// //add attribute
+// newDiv.setAttribute('title','new title');
 
-//create text node
-var newDivText  = document.createTextNode('This element is created and added to the DOM by Vanilla js instead of HTML/CSS');
-newDiv.appendChild(newDivText);
+// //create text node
+// var newDivText  = document.createTextNode('This element is created and added to the DOM by Vanilla js instead of HTML/CSS');
+// newDiv.appendChild(newDivText);
 
-//adding to the DOM
-var container = document.querySelector('header  .container');
-var ul = document.querySelector('header h1');
-newDiv.style.fontSize='13px';
-container.insertBefore(newDiv,ul);
+// //adding to the DOM
+// var container = document.querySelector('header  .container');
+// var ul = document.querySelector('header h1');
+// newDiv.style.fontSize='13px';
+// container.insertBefore(newDiv,ul);
+
+
+			//EVENT LISTENER//
+
+var button = document.getElementById('button')
+button.addEventListener('click',event);
+
+function buttonClick(){
+	document.getElementById('hey').textContent = '';
+	// document.getElementById('header-title').style.color = '#000000';
+	var output = document.getElementById('output');
+	output.innerHTML = '<h1>'+'Thank You'+'</h1>';
+
+}
+
+function event(e){
+	// console.log(e)
+	// console.log(e.screenY)
+	// console.log(e.path)
+	// console.log(e.srcElement)
+	// console.log(e.target)
+	// console.log(e.target.id)
+	// console.log(e.target.className)
+	// console.log(e.target.classList)
+	// console.log(e.clientX)//mouse position on the browser screen
+	// console.log(e.clientY)
+	// console.log(e.offsetX)//mouse position on the actual button
+	// console.log(e.offsetY)
+
+	// console.log(e.altKey); //key is pressed or not
+	// console.log(e.ctrlKey);
+	// console.log(e.shiftKey);
+
+
+}
+
 
 
 
