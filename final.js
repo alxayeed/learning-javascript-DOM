@@ -39,9 +39,9 @@ function addItem(e){
 itemList.addEventListener('click',deleteItem);
 
 function deleteItem(e){
-  if(e.target.classList.contains('delete')){
+  if(e.target.classList.contains('delete')){//target moves from li to 'x' button
     if(confirm('Are you sure to delete?')){
-      var li  = e.target.parentElement
+      var li  = e.target.parentElement ////target moves from 'x' button to li 
       itemList.removeChild(li);
     }
     console.log(e.type);
@@ -49,3 +49,28 @@ function deleteItem(e){
   
 }
 
+
+//SEARCH
+filter.addEventListener('keyup',filterItems);
+
+function filterItems(e){
+  //convert text to lower case
+  var text = e.target.value.toLowerCase();
+  
+  //all list items to variable
+  var items = itemList.getElementsByTagName('li')
+
+  //Convert to array
+  Array.from(items).forEach(function(item){
+    var itemName = item.firstChild.textContent;
+    //Matching with itemName
+    if(itemName.toLowerCase().indexOf(text) != -1){
+      item.style.display = 'block'; //if matches,show it
+    }
+    else{
+      item.style.display = 'none'; //if doesn't match,show nothing
+    }
+  })
+
+  
+}
