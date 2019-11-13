@@ -212,6 +212,7 @@ var itemList = document.querySelector('#items');
 
 // }
 
+//EVENTS - click,dbclick,mouseup,mousedown,mouseenter,mouseleave,mouseover,mouseout,mousemove,keydown,keyup,focus,blur,cut,paste,input,
 
    //MOUSE ACTIONS//
 var button = document.getElementById('button')
@@ -230,20 +231,59 @@ var box = document.getElementById('box')
 // box.addEventListener('mouseover',mouseEvent);//when mouse enters the box as well as any inner elements (eg - h1)
 // box.addEventListener('mouseout',mouseEvent);//when mouse exits the box as well as any inner elements (eg - h1)
 
-var output = document.getElementById('box');
-box.addEventListener('mousemove',mouseEvent);
+// var output = document.getElementById('box');
+// box.addEventListener('mousemove',mouseEvent);
 
-function mouseEvent(e){
-	// console.log('EVENT TYPE:'+e.type)
+// function mouseEvent(e){
+// 	// console.log('EVENT TYPE:'+e.type)
 
-	// output.innerHTML = '<h1>Mouse X:'+e.offsetX+'</h1><h1>Mouse Y:'+e.offsetY+'</h1>'
-	box.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",0)";
-	document.body.style.backgroundColor="rgb("+e.offsetY+","+e.offsetX+",100)";
+// 	// output.innerHTML = '<h1>Mouse X:'+e.offsetX+'</h1><h1>Mouse Y:'+e.offsetY+'</h1>'
+// 	box.style.backgroundColor="rgb("+e.offsetX+","+e.offsetY+",0)";
+// 	document.body.style.backgroundColor="rgb("+e.offsetY+","+e.offsetX+",100)";
+
+// }
+
+		//INPUT EVENTS//
+var input = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+
+var box = document.getElementById('box')
+
+// input.addEventListener('keydown',inputEvent);//when key in box is pressed
+// input.addEventListener('keyup',inputEvent);//when pressure is released
+// input.addEventListener('keypress',inputEvent);
+
+// input.addEventListener('focus',inputEvent);
+// input.addEventListener('blur',inputEvent);
+
+// input.addEventListener('cut',inputEvent);
+// input.addEventListener('paste',inputEvent);
+
+// input.addEventListener('input',inputEvent);//anything in the input box
+
+var select = document.querySelector('select');
+
+// select.addEventListener('change',inputEvent)
+// select.addEventListener('input',inputEvent)
+
+
+// function inputEvent(e){
+// 	console.log(e.type)
+// 	value = e.target.value
+// 	box.innerHTML = '<h1>'+'EVENT TYPE : '+e.type+'</h1><h2>'+value+'</h2>'
+// 	// document.body.style.display='none'
+
+// }
+
+form.addEventListener('submit',inputEvent)
+
+function inputEvent(e){
+	e.preventDefault()
+	console.log(e.type)
+	value = e.target.value
+	box.innerHTML = '<h1>'+'EVENT TYPE : '+e.type+'</h1><h2>'+value+'</h2>'
 
 }
-
-
-
 
 
 
