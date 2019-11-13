@@ -212,7 +212,7 @@ var itemList = document.querySelector('#items');
 
 // }
 
-//EVENTS - click,dbclick,mouseup,mousedown,mouseenter,mouseleave,mouseover,mouseout,mousemove,keydown,keyup,focus,blur,cut,paste,input,
+//ALL THE EVENTS - click,dbclick,mouseup,mousedown,mouseenter,mouseleave,mouseover,mouseout,mousemove,keydown,keyup,focus,blur,cut,paste,input,change,submit
 
    //MOUSE ACTIONS//
 var button = document.getElementById('button')
@@ -284,6 +284,8 @@ function inputEvent(e){
 	box.innerHTML = '<h1>'+'EVENT TYPE : '+e.type+'</h1><h2>'+value+'</h2>'
 
 }
+
+
 
 
 
